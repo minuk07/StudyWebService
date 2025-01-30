@@ -11,7 +11,7 @@ import java.util.Optional;
 @Service
 public class UserRepository {
 
-    private List<UserDto> userList = new ArrayList<();
+    private List<UserDto> userList = new ArrayList<>();
 
     public Optional<UserDto> findByName(String name){
         return userList.stream().filter(it -> {

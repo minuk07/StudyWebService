@@ -26,7 +26,7 @@ public class UserService {
 
             if(userDto.getPassword().equals(pw)){
                 //세션에 정보를 저장 (USER라는 key로 사용자 정보 저장)
-                httpSession.setAttribute("USER", userDto);
+                httpSession.setAttribute("USER", userDto); //서버와 연결된 세션에는 항상 동일한 정보 저장.
             }else{
                 throw new RuntimeException("Password Not Match");
             }
