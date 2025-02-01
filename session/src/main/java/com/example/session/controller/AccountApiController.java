@@ -20,7 +20,7 @@ public class AccountApiController {
     @PostMapping("/login")
     public void login(
         @RequestBody
-        LoginRequest loginRequest,
+        LoginRequest loginRequest, //로그인할 때 받는 인자
         HttpSession httpSession //스프링에서 자동으로 해당 요청에 대한 세션을 만들어 주입.
     ){
         userService.login(loginRequest, httpSession);
