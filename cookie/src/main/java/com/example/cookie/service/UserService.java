@@ -31,6 +31,8 @@ public class UserService {
                 var cookie = new Cookie("authorization-cookie",userDto.getId());
                 cookie.setDomain("localhost"); //해당 도메인에서만 활용 가능.
                 cookie.setPath("/"); //경로 설정 (root)
+                cookie.setHttpOnly(true); //자바스크립트에서 해당 값을 읽을 수 없게 설정. (보안강화)
+                //cookie.setSecure(true); //https 환경에서만 동작할 수 있도록 보안 강화
                 cookie.setMaxAge(-1); //세션이 유지되어 있을동안만 연결
 
                 httpServletResponse.addCookie(cookie); //response에 쿠키를 설정할 수 있음.
